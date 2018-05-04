@@ -7,6 +7,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sorting.AbstractSorting;
+import sorting.simpleSorting.BubbleSort;
+import sorting.simpleSorting.InsertionSort;
+import sorting.simpleSorting.SelectionSort;
+import sorting.variationsOfSelectionsort.SimultaneousSelectionsort;
 
 public class StudentSortingTest {
 
@@ -28,6 +32,7 @@ public class StudentSortingTest {
 		populaVetorIgual(new Integer[] { 6, 6, 6, 6, 6, 6 });
 
 		getImplementation();
+		
 	}
 
 	// // MÉTODOS AUXILIARES DA INICIALIZAÇÃO
@@ -38,8 +43,8 @@ public class StudentSortingTest {
 	private void getImplementation() {
 		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
 		// null
-		this.implementation = null;
-		Assert.fail("Implementation not provided");
+		this.implementation = new SimultaneousSelectionsort<Integer>();
+		
 	}
 
 	public void populaVetorTamanhoPar(Integer[] arrayPadrao) {

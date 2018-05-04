@@ -20,9 +20,7 @@ public class SelectionSort<T extends Comparable<T>> extends AbstractSorting<T> {
 					posMenor = j;
 				}
 			}
-			if (array[i].compareTo(array[posMenor]) != 0) {
-				Util.swap(array, i, posMenor);
-			}
+			Util.swap(array, i, posMenor);
 		}
 	}
 }

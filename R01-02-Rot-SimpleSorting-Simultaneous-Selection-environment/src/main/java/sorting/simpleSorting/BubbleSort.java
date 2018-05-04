@@ -10,14 +10,14 @@ import util.Util;
  */
 public class BubbleSort<T extends Comparable<T>> extends AbstractSorting<T> {
 
-	@Override
-	public void sort(T[] array, int leftIndex, int rightIndex) {
-		for (int i = leftIndex; i <= rightIndex; i++) {
-			for (int j = leftIndex; j < rightIndex; i++) {
-				if (array[j].compareTo(array[j+1]) > 0) {
-					Util.swap(array, i, j+1);
-				}
-			}
-		}
-	}
+   @Override
+   public void sort(T[] array, int leftIndex, int rightIndex) {
+      for (int i = leftIndex; i <= rightIndex; i++) {
+    	  for (int j = leftIndex; j < rightIndex; i++) {
+    		  if (array[j].compareTo(array[j+1]) > 0) {
+    			  Util.swap(array, i, j+1);
+    		  }
+    	  }
+      }
+   }
 }

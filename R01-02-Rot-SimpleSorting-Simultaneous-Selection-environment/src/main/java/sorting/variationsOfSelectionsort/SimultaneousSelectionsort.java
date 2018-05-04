@@ -1,5 +1,6 @@
 package sorting.variationsOfSelectionsort;
 
+
 import sorting.AbstractSorting;
 import util.Util;
 
@@ -12,28 +13,30 @@ import util.Util;
  * iteration does the same from index 1 to index N-2. And so on. The execution
  * continues until the array is completely ordered.
  */
-public class SimultaneousSelectionsort<T extends Comparable<T>> extends
-		AbstractSorting<T> {
-	
-	public void sort(T[] array, int leftIndex, int rightIndex) {
-		int posMenor, posMaior;
-		for (int i = leftIndex; i <= (rightIndex + leftIndex) / 2; i++) {
+public class SimultaneousSelectionsort<T extends Comparable<T>> extends AbstractSorting<T> {
+
+   public void sort(T[] array, int leftIndex, int rightIndex) {
+	   int posMenor, posMaior; 
+	   int aux = 0;
+		for (int i = leftIndex; i <= ((rightIndex + leftIndex) / 2.0); i++) {
 			posMenor = i;
-			posMaior = i;
-			for (int j = i + 1; j <= rightIndex; j++) {
+			for (int j = i + 1; j <= rightIndex - aux; j++) {
 				if (array[j].compareTo(array[posMenor]) < 0) {
 					posMenor = j;
 				}
-				if (array[j].compareTo(array[posMenor]) > 0) {
+			}
+			Util.swap(array, i, posMenor);
+			
+			posMaior = rightIndex - aux;
+			for (int j = rightIndex - aux; j > i ; j--) {
+				if (array[j].compareTo(array[posMaior]) > 0) {
 					posMaior = j;
 				}
 			}
-			if (array[i].compareTo(array[posMenor]) != 0) {
-				Util.swap(array, i, posMenor);
-			}
-			if (array[rightIndex -  i].compareTo(array[posMaior]) != 0) {
-				Util.swap(array, rightIndex - i, posMaior);
-			}
+			Util.swap(array, rightIndex - aux, posMaior);
+			aux++;
 		}
-	}
+		
+		
+   }
 }
