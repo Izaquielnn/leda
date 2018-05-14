@@ -7,3 +7,23 @@
   <level>FINE</level>
   <message>File 117111446-IZAQUIEL NUNES DO NASCIMENTO.zip was received. It was sent by IZAQUIEL NUNES DO NASCIMENTO from IP 150.165.42.112</message>
 </record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-14T00:59:06.349-0300</date>
+  <logger>IZAQUIEL NUNES DO NASCIMENTO</logger>
+  <level>FINE</level>
+  <message>File 117111446-IZAQUIEL NUNES DO NASCIMENTO.zip was received. It was sent by IZAQUIEL NUNES DO NASCIMENTO from IP 192.168.15.20</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-14T01:04:05.076-0300</date>
+  <logger>IZAQUIEL NUNES DO NASCIMENTO</logger>
+  <level>FINE</level>
+  <message>File 117111446-IZAQUIEL NUNES DO NASCIMENTO.zip was received. It was sent by IZAQUIEL NUNES DO NASCIMENTO from IP 192.168.15.20</message>
+</record>
