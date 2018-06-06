@@ -2,6 +2,7 @@ package adt.stack;
 
 import adt.linkedList.DoubleLinkedList;
 import adt.linkedList.DoubleLinkedListImpl;
+import adt.linkedList.SingleLinkedListImpl;
 
 public class StackDoubleLinkedListImpl<T> implements Stack<T> {
 
@@ -15,33 +16,36 @@ public class StackDoubleLinkedListImpl<T> implements Stack<T> {
 
 	@Override
 	public void push(T element) throws StackOverflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented!");
-
+		if (isFull()) {
+			throw new StackOverflowException();
+		}
+		top.insertFirst(element);
 	}
 
 	@Override
 	public T pop() throws StackUnderflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented!");
+		if (isEmpty()) {
+			throw new StackUnderflowException();
+		}
+		T aux = top();
+		top.removeFirst();
+		return aux;
 	}
 
 	@Override
 	public T top() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented!");
+		return ((SingleLinkedListImpl<T>) top).getHead().getData();
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented!");
+		return top.isEmpty();
 	}
 
 	@Override
 	public boolean isFull() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented!");
+		return top.size() == size;
 	}
+	
 
 }
