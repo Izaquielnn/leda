@@ -34,6 +34,7 @@ public class QueueDoubleLinkedListImpl<T> implements Queue<T> {
 	
 
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public T head() {
 		return ((SingleLinkedListImpl<T>) list).getHead().getData();

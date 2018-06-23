@@ -36,7 +36,7 @@ public class QueueUsingStack<T> implements Queue<T> {
 		
 	}
 	
-	private void transport(Stack orig, Stack dest) throws StackOverflowException, StackUnderflowException {
+	private void transport(Stack<T> orig, Stack<T> dest) throws StackOverflowException, StackUnderflowException {
 		for (int i = 0; i <= tail; i++) {
 			dest.push(orig.pop());
 		}

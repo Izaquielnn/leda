@@ -122,7 +122,7 @@ public class RecursiveDoubleLinkedListImpl<T> extends
 	public void removeLast() {
 		if (!this.isEmpty()) {
 			if (this.getNext().isEmpty()) {
-				if (thi s.getPrevious().isEmpty()) {
+				if (this.getPrevious().isEmpty()) {
 					this.setData(null);
 					this.setNext(new RecursiveDoubleLinkedListImpl<T>(null, null, this));
 				} else {
